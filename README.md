@@ -1,12 +1,12 @@
-# Bzip2 – Visual Studio 2013 libbz2.dll Build #
+# Bzip2 – Visual Studio libbz2.dll Build #
 
-Patches and a PowerShell script to build [bzip2](http://www.bzip.org/) with Visual Studio 2013 using a dynamic library (libbz2.dll).
+Patches and a PowerShell script to build [bzip2](http://www.bzip.org/) with Visual Studio using a dynamic library (libbz2.dll).
 
 ## Patches ##
 
 Patches are included in this repository that modify the `makefile.msc` file in the bzip2 distribution to:
 
-- Build cleanly with Visual Studio 2013 (replacing deprecated command line options).
+- Build cleanly with Visual Studio 2013 and later (replacing deprecated command line options).
 - Build libbz2 as a DLL (`libbz2.dll`).
 - Dynamically link the executable outputs with `libbz2.dll` (by default the executables are statically linked).
 - Add a version resource to the executables and DLL.
@@ -26,7 +26,7 @@ The PowerShell script, `Build-Bzip2.ps1`, performs the following actions:
 `Build-Bzip2.ps1` requires:
 
 - 64-bit Windows.
-- Microsoft Visual Studio 2013.
+- Microsoft Visual Studio 2013 or later (set $VisualStudioDir accordingly).
 - [PowerShell Community Extensions](https://pscx.codeplex.com/).
 - Git (used to apply patches).
 
@@ -34,4 +34,4 @@ The PowerShell script, `Build-Bzip2.ps1`, performs the following actions:
 
 32-bit and 64-bit Windows binaries can be [downloaded from the releases page](https://github.com/philr/bzip2-windows/releases).
 
-The binary releases depend on the Visual Studio 2013 C Runtime Library (`msvcr120.dll`). This can be installed using the [Visual C++ Redistributable Packages for Visual Studio 2013](http://www.microsoft.com/en-gb/download/details.aspx?id=40784) installer.
+The binary releases depend on the Visual Studio C Runtime Library (please refer to the release notes for details).

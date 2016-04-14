@@ -5,7 +5,7 @@
 
 Param (
   [string]$GitPath = 'git',
-  [string]$VisualStudioDir = 'C:\Program Files (x86)\Microsoft Visual Studio 12.0'  
+  [string]$VisualStudioDir = 'C:\Program Files (x86)\Microsoft Visual Studio 14.0'  
 )
 
 $Version = '1.0.6'
