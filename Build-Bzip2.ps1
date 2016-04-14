@@ -94,7 +94,7 @@ try {
         Write-Host "Building $Architecture"
 
         # Build, using vcvarsall.bat to setup the build environment for the current architecture.
-        cmd /C "`"`"$VcVarsAllPath`" $VcVars & nmake -f makefile.msc all`""
+        cmd /C "`"$VcVarsAllPath`" $VcVars & nmake -f makefile.msc all"
 
         if (-not $?) {
             throw "Failed to build $Architecture"
@@ -120,7 +120,7 @@ try {
         }
 
         # Clean the source tree.
-        cmd /C "`"`"$VcVarsAllPath`" $VcVars & nmake -f makefile.msc clean`""
+        cmd /C "`"$VcVarsAllPath`" $VcVars & nmake -f makefile.msc clean"
 
         if (-not $?) {
             throw "Failed to clean $Architecture"
