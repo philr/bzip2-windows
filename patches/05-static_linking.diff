@@ -1,0 +1,22 @@
+--- bzip2-1.0.6.orig/makefile.msc	2017-08-31 00:45:42.025542400 +0100
++++ bzip2-1.0.6/makefile.msc	2017-08-31 00:47:06.733790100 +0100
+@@ -4,7 +4,7 @@
+ # Fixed up by JRS for bzip2-0.9.5d release.
+ 
+ CC=cl
+-CFLAGS= -DWIN32 -MD -Ox -D_FILE_OFFSET_BITS=64 -nologo
++CFLAGS= -DWIN32 -MT -Ox -D_FILE_OFFSET_BITS=64 -nologo
+ RC=rc
+ 
+ OBJS= blocksort.obj  \
+@@ -17,8 +17,8 @@
+ 
+ all: dll lib bzip2 test
+ 
+-bzip2: dll bzip2.res bzip2recover.res
+-	$(CC) $(CFLAGS) /Febzip2 bzip2.c libbz2.lib setargv.obj bzip2.res
++bzip2: lib bzip2.res bzip2recover.res
++	$(CC) $(CFLAGS) /Febzip2 bzip2.c libbz2-static.lib setargv.obj bzip2.res
+ 	$(CC) $(CFLAGS) /Febzip2recover bzip2recover.c bzip2recover.res
+ 
+ dll: $(OBJS) libbz2.def libbz2.res
