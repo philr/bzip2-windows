@@ -1,7 +1,7 @@
 # Download and build bzip2 for Windows using Visual Studio.
 
 # Requires Git, PowerShell Community Extensions (https://pscx.codeplex.com/) 
-# and Visual Studio 2013 on 64-bit Windows.
+# and Visual Studio 2015 on 64-bit Windows.
 
 Param (
   [string]$GitPath = 'git',
