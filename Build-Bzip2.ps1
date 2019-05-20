@@ -23,7 +23,7 @@ New-Item -ItemType Directory -Force -Path $SourceDir | Out-Null
 
 if (-not (Test-Path -LiteralPath $GzipPath)) {
     Write-Host "Downloading $SourceFile"
-    Invoke-WebRequest -Uri "http://www.bzip.org/$Version/$GzipFile" -Method Get -OutFile $GzipPath
+    Invoke-WebRequest -Uri "https://www.sourceware.org/pub/bzip2/$GzipFile" -Method Get -OutFile $GzipPath
 }
 
 # Delete any existing extracted sources and then extract the tar.bz2 file.
