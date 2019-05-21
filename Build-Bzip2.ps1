@@ -10,6 +10,7 @@ Param (
 
 $Version = '1.0.6'
 $ExpectedHash = 'A2848F34FCD5D6CF47DEF00461FCB528A0484D8EDEF8208D6D2E2909DC61D9CD'
+$PackageVersion = '1.0.6.1'
 
 $ErrorActionPreference = 'Stop'
 
@@ -72,9 +73,9 @@ try {
     
     # Setup directories to copy built outputs and packaged zip files to (deleting and recreating if they already exist).
     $OutputsRootDir = Join-Path -Path $PSScriptRoot -ChildPath 'outputs'
-    $OutputsDir = Join-Path -Path $OutputsRootDir -ChildPath $Version
+    $OutputsDir = Join-Path -Path $OutputsRootDir -ChildPath $PackageVersion
     $PackagesRootDir = Join-Path -Path $PSScriptRoot -ChildPath 'packages'
-    $PackagesDir = Join-Path -Path $PackagesRootDir -ChildPath $Version
+    $PackagesDir = Join-Path -Path $PackagesRootDir -ChildPath $PackageVersion
 
     New-Item -ItemType Directory -Force -Path $OutputsRootDir | Out-Null
     
@@ -118,7 +119,7 @@ try {
         ('', ('libbz2.dll', 'bzip2.exe', 'bzip2recover.exe')), ('-dll', ('libbz2.dll')), ('-dev', ('bzlib.h', 'libbz2.lib', 'libbz2.exp', 'libbz2-static.lib')) | ForEach-Object {
             $Suffix = $_[0]
             $Files = $_[1]
-            $ZipFile = "bzip2$Suffix-$Version-win-$Architecture.zip"
+            $ZipFile = "bzip2$Suffix-$PackageVersion-win-$Architecture.zip"
 
             Write-Host "Creating zip $zipFile"
 

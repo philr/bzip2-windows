@@ -3,7 +3,7 @@
 LANGUAGE 0x09,0x01
 
 1 VERSIONINFO
-  FILEVERSION 1,0,6,0
+  FILEVERSION 1,0,6,1
   PRODUCTVERSION 1,0,6,0
   FILEFLAGSMASK 0x3fL
   FILEFLAGS 0x00L
@@ -22,7 +22,7 @@ BEGIN
           // VALUE "Comments", "\0"
           VALUE "CompanyName", "bzip2, http://www.bzip.org/\0"
           VALUE "FileDescription", "bzip2\0"
-          VALUE "FileVersion", "1.0.6\0"
+          VALUE "FileVersion", "1.0.6.1\0"
 #if defined(LIBBZ2)
           VALUE "InternalName", "libbz2\0"
           VALUE "OriginalFilename", "libbz2.dll\0"
