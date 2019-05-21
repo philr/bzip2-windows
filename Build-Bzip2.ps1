@@ -9,6 +9,7 @@ Param (
 )
 
 $Version = '1.0.6'
+$ExpectedHash = 'A2848F34FCD5D6CF47DEF00461FCB528A0484D8EDEF8208D6D2E2909DC61D9CD'
 
 $ErrorActionPreference = 'Stop'
 
@@ -24,6 +25,11 @@ New-Item -ItemType Directory -Force -Path $SourceDir | Out-Null
 if (-not (Test-Path -LiteralPath $GzipPath)) {
     Write-Host "Downloading $SourceFile"
     Invoke-WebRequest -Uri "https://www.sourceware.org/pub/bzip2/$GzipFile" -Method Get -OutFile $GzipPath
+
+    $ActualHash = Get-FileHash -LiteralPath $GzipPath -Algorithm SHA256
+    if ($ExpectedHash -ne $ActualHash.Hash) {
+        throw "Downloaded hash check failed, expected $ExpectedHash, found $($ActualHash.Hash)."
+    }
 }
 
 # Delete any existing extracted sources and then extract the tar.bz2 file.
