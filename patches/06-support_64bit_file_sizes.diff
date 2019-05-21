@@ -1,0 +1,13 @@
+--- bzip2-1.0.6.orig/bzip2.c	2010-09-11 00:04:53.000000000 +0100
++++ bzip2-1.0.6/bzip2.c	2019-05-21 20:40:43.699892600 +0100
+@@ -132,8 +132,8 @@
+ 
+ #   define NORETURN       /**/
+ #   define PATH_SEP       '\\'
+-#   define MY_LSTAT       _stat
+-#   define MY_STAT        _stat
++#   define MY_LSTAT       _stati64
++#   define MY_STAT        _stati64
+ #   define MY_S_ISREG(x)  ((x) & _S_IFREG)
+ #   define MY_S_ISDIR(x)  ((x) & _S_IFDIR)
+ 
