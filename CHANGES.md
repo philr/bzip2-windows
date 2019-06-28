@@ -2,7 +2,7 @@
 
 ## Release v1.0.7.0 - 28-Jun-2019
 
-- [bzip2 version 1.0.7](<https://sourceware.org/ml/bzip2-devel/2019-q2/msg00022.html>):
+- [bzip2 version 1.0.7](https://sourceware.org/ml/bzip2-devel/2019-q2/msg00022.html):
   - Fix undefined behaviour in the macros `SET_BH`, `CLEAR_BH`  and `ISSET_BH`.
   - bzip2: Fix return value when combining `--test`, `-t` and `-q`.
   - bzip2recover: Fix buffer overflow for large `argv[0]`.
