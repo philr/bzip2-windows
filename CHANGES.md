@@ -1,5 +1,18 @@
 # Changes
 
+## Release v1.0.8.0 - 14-Jul-2019
+
+- [bzip2 version 1.0.8](https://sourceware.org/ml/bzip2-devel/2019-q3/msg00031.html):
+  - Accept as many selectors as the file format allows. This relaxes the fix for
+    CVE-2019-12900 from 1.0.7 so that bzip2 allows decompression of bz2 files
+    that use (too) many selectors again.
+  - Fix handling of large (> 4GB) files on Windows.
+  - Cleanup of bzdiff and bzgrep scripts so they don't use any bash extensions
+    and handle multiple archives correctly.
+- The 05-support_64bit_file_sizes patch has been removed. This has now been
+  included upstream.
+
+
 ## Release v1.0.7.0 - 28-Jun-2019
 
 - [bzip2 version 1.0.7](https://sourceware.org/ml/bzip2-devel/2019-q2/msg00022.html):

@@ -8,9 +8,9 @@ Param (
   [string]$VisualStudioDir = 'C:\Program Files (x86)\Microsoft Visual Studio 14.0'  
 )
 
-$Version = '1.0.7'
-$ExpectedHash = 'E768A87C5B1A79511499BEB41500BCC4CAF203726FFF46A6F5F9AD27FE08AB2B'
-$PackageVersion = '1.0.7.0'
+$Version = '1.0.8'
+$ExpectedHash = 'AB5A03176EE106D3F0FA90E381DA478DDAE405918153CCA248E682CD0C4A2269'
+$PackageVersion = '1.0.8.0'
 
 $ErrorActionPreference = 'Stop'
 
