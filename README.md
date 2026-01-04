@@ -28,7 +28,7 @@ The PowerShell script, `Build-Bzip2.ps1`, performs the following actions:
 
 - 64-bit Windows.
 - Microsoft Visual Studio 2013 or later (set `$VisualStudioDir` accordingly).
-- [PowerShell Community Extensions](https://pscx.codeplex.com/).
+- [PowerShell Community Extensions](https://github.com/Pscx/Pscx).
 - Git (used to apply patches).
 
 ## Binaries ##
