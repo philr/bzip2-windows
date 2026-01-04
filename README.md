@@ -10,7 +10,6 @@ Patches are included in this repository that modify the `makefile.msc` file in t
 - Build libbz2 as a DLL (`libbz2.dll`).
 - Dynamically link the executable outputs with `libbz2.dll` (by default the executables are statically linked).
 - Add a version resource to the executables and DLL.
-- Fix a 'not a normal file' error when using `bzip2.exe` to compress large files.
 
 ## PowerShell Script ##
 
